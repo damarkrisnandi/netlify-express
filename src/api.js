@@ -6,19 +6,19 @@ const app = express();
 
 const router = express.Router();
 
-router.get('/api/', (req, res) => {
+router.get('/', (req, res) => {
     res.json({
         "hello": "hi"
     })
 });
 
-router.get('/api/test', (req, res) => {
+router.get('/test', (req, res) => {
     res.json({
         "hello": "ini adalah test"
     })
 });
 
-app.use('/', router);
+app.use('/api/', router);
 
 
 module.exports.handler = serverless(app);
