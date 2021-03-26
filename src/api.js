@@ -18,7 +18,8 @@ router.get('/test', (req, res) => {
     })
 });
 
-app.use('/.netlify/functions/api/', router);
+// app.use('/.netlify/functions/api/', router);
+app.use('/api/', router);
 
 
 module.exports.handler = serverless(app);
