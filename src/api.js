@@ -6,20 +6,18 @@ const app = express();
 
 const router = express.Router();
 
-router.get('*/', (req, res) => {
+router.get('*/:id', (req, res) => {
+// Code goes here
     res.json({
-        "hello": "hi"
+        hello: "hi", id: req.params.id
     })
 });
 
-router.get('*/test', (req, res) => {
-    res.json({
-        "hello": "ini adalah test"
-    })
-});
+// app.use(bodyParser.json());
+app.use('/', router); 
 
 // app.use('/.netlify/functions/api/', router);
-app.use('/api/', router);
+
 
 
 module.exports.handler = serverless(app);
