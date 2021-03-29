@@ -6,7 +6,7 @@ const app = express();
 
 const router = express.Router();
 
-router.get('*/:id', (req, res) => {
+router.get('/:id', (req, res) => {
 // Code goes here
     res.json({
         hello: "hi", id: req.params.id
