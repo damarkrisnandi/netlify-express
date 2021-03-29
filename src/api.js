@@ -14,7 +14,7 @@ router.get('*/:id', (req, res) => {
 });
 
 // app.use(bodyParser.json());
-app.use('/', router); 
+app.use('/api/', router); 
 
 // app.use('/.netlify/functions/api/', router);
 
